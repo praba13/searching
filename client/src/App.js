@@ -1,9 +1,10 @@
 import './App.css';
+import BasicSearch from './components/BasicSearch';
 
 function App() {
   return (
     <div className='App'>
-      <h1>Hi</h1>
+      <BasicSearch />
     </div>
   );
 }
