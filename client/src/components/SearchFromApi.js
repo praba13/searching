@@ -8,12 +8,13 @@ const SearchFromApi = () => {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const res = await axios.get('http://localhost:6532');
+      //const res = await axios.get('http://localhost:6532');
+      const res = await axios.get(`http://localhost:6532?q=${query}`);
       console.log(res.data);
       setData(res.data);
     };
-    fetchUsers();
-  }, []);
+    if (query.length === 0 || query.length > 2) fetchUsers();
+  }, [query]);
 
   return (
     <div className='app'>
