@@ -21,7 +21,7 @@ const SearchFromApi = () => {
       <input
         className='search'
         placeholder='Search...'
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={(e) => setQuery(e.target.value.toLocaleLowerCase())}
       />
       {<Table data={data} />}
     </div>
